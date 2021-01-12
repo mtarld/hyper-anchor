@@ -1,0 +1,43 @@
+{
+    "manifest_version": 2,
+    "name": "HyperAnchor",
+    "version": "1.0",
+    "description": "Create/Follow links that point to selected text in a webpage",
+    "author": "Mathias Arlaud",
+    "homepage_url": "http://github.com/mtarld/hyper-anchor",
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "offline_enabled": true,
+    "permissions": [
+        "storage",
+        "contextMenus",
+        "<all_urls>"
+    ],
+    "options_ui": {
+        "page": "options.html",
+        "open_in_tab": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "css": ["toast.css"],
+            "js": [
+                "hyper-anchor.js",
+                "toast.js",
+                "node-normalizer.js",
+                "vendor/base65536.min.js",
+                "vendor/msgpack.min.js"
+            ],
+            "run_at": "document_start",
+            "all_frames": true
+        }
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "web_accessible_resources": ["toast.css"]
+}

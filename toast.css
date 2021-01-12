@@ -1,0 +1,48 @@
+#toast {
+    background-color: #333;
+    border-radius: 4px;
+    bottom: -22px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.28);
+    color: #fff;
+    display: none;
+    font-family: Roboto, Ubuntu, Arial, sans-serif;
+    font-size: 10pt;
+    height: 52px;
+    left: 0;
+    line-height: 52px;
+    margin-left: 22px;
+    max-width: 568px;
+    min-width: 288px;
+    padding: 0 24px;
+    position: fixed;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#toast.toast-show {
+    animation: fadein 0.3s, fadeout 0.3s 2.9s;
+    bottom: 22px;
+    display: block;
+    visibility: visible;
+    -webkit-animation: fadein 0.3s, fadeout 0.3s 2.9s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: -22px; opacity: .8;}
+    to {bottom: 22px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: -22px; opacity: .8;}
+    to {bottom: 22px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 22px; opacity: 1;}
+    to {bottom: -33px; opacity: .8;}
+}
+
+@keyframes fadeout {
+    from {bottom: 22px; opacity: 1;}
+    to {bottom: -33px; opacity: .8;}
+}

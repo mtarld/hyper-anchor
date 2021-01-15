@@ -13,8 +13,7 @@
     "offline_enabled": true,
     "permissions": [
         "storage",
-        "contextMenus",
-        "<all_urls>"
+        "contextMenus"
     ],
     "options_ui": {
         "page": "options.html",
